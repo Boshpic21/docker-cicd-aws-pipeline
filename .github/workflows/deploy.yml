@@ -49,7 +49,7 @@ jobs:
     - name: Desplegar en Amazon ECS
       uses: aws-actions/amazon-ecs-deploy-task-definition@v2
       with:
-        task-definition: tarea-hola-docker
+        task-definition: task-definition.json
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
