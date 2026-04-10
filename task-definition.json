@@ -1,0 +1,21 @@
+{
+  "family": "tarea-hola-docker",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::816020558828:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "hola-docker",
+      "image": "816020558828.dkr.ecr.us-east-1.amazonaws.com/hola-docker:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
